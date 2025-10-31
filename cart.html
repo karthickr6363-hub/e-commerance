@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Flipmart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Utility Bar -->
+    <div class="utility-bar">
+        <div class="container">
+            <div class="utility-left">
+                <select class="utility-select">
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+                <select class="utility-select">
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                </select>
+                <a href="account.html" class="utility-link"><i class="fas fa-user"></i> My Account</a>
+                <a href="#" class="utility-link"><i class="fas fa-heart"></i> Wishlist</a>
+            </div>
+            <div class="utility-right">
+                <a href="cart.html" class="utility-link"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                <a href="checkout.html" class="utility-link"><i class="fas fa-check"></i> Checkout</a>
+                <a href="login.html" class="utility-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Flip<span class="logo-accent">mart</span></span>
+                </a>
+                <div class="search-bar">
+                    <select class="categories-dropdown">
+                        <option>Categories</option>
+                        <option>Clothing</option>
+                        <option>Electronics</option>
+                        <option>Shoes</option>
+                        <option>Watches</option>
+                    </select>
+                    <input type="text" placeholder="Search here..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-summary">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div class="cart-info">
+                        <span class="cart-label">CART</span>
+                        <span class="cart-price" id="cartTotal">$600.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Section -->
+    <div class="cart-container">
+        <div class="container">
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+                <p>You have <span id="itemCount">3</span> items in your cart</p>
+            </div>
+
+            <div class="cart-wrapper">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item" data-id="1">
+                        <div class="item-image">
+                            <img src="https://images.pexels.com/photos/884979/pexels-photo-884979.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Floral Print Buttoned">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-name">Floral Print Buttoned</h3>
+                            <p class="item-size">Size: Medium | Color: Blue</p>
+                            <p class="item-code">SKU: FPB-001-M-B</p>
+                            <div class="item-price">
+                                <span class="current-price">$450.99</span>
+                                <span class="old-price">$900.00</span>
+                            </div>
+                        </div>
+                        <div class="item-quantity">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus" onclick="updateQuantity(1, -1)"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" data-id="1" readonly>
+                                <button class="qty-btn plus" onclick="updateQuantity(1, 1)"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="item-subtotal">
+                            <span class="subtotal-label">Subtotal</span>
+                            <span class="subtotal-price" data-price="450.99">$450.99</span>
+                        </div>
+                        <button class="remove-item" onclick="removeItem(1)">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item" data-id="2">
+                        <div class="item-image">
+                            <img src="https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Floral Print Buttoned">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-name">Floral Print Buttoned</h3>
+                            <p class="item-size">Size: Large | Color: Silver</p>
+                            <p class="item-code">SKU: FPB-002-L-S</p>
+                            <div class="item-price">
+                                <span class="current-price">$450.99</span>
+                                <span class="old-price">$900.00</span>
+                            </div>
+                        </div>
+                        <div class="item-quantity">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus" onclick="updateQuantity(2, -1)"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" data-id="2" readonly>
+                                <button class="qty-btn plus" onclick="updateQuantity(2, 1)"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="item-subtotal">
+                            <span class="subtotal-label">Subtotal</span>
+                            <span class="subtotal-price" data-price="450.99">$450.99</span>
+                        </div>
+                        <button class="remove-item" onclick="removeItem(2)">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+
+                    <!-- Cart Item 3 -->
+                    <div class="cart-item" data-id="3">
+                        <div class="item-image">
+                            <img src="https://images.pexels.com/photos/1125120/pexels-photo-1125120.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Floral Print Buttoned">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-name">Floral Print Buttoned</h3>
+                            <p class="item-size">Size: One Size | Color: Brown</p>
+                            <p class="item-code">SKU: FPB-003-OS-BR</p>
+                            <div class="item-price">
+                                <span class="current-price">$450.99</span>
+                                <span class="old-price">$800.00</span>
+                            </div>
+                        </div>
+                        <div class="item-quantity">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn minus" onclick="updateQuantity(3, -1)"><i class="fas fa-minus"></i></button>
+                                <input type="number" class="qty-input" value="1" min="1" data-id="3" readonly>
+                                <button class="qty-btn plus" onclick="updateQuantity(3, 1)"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="item-subtotal">
+                            <span class="subtotal-label">Subtotal</span>
+                            <span class="subtotal-price" data-price="450.99">$450.99</span>
+                        </div>
+                        <button class="remove-item" onclick="removeItem(3)">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary-box">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="subtotal">$1,352.97</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span class="shipping-free">FREE</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span>Tax</span>
+                        <span id="tax">$108.24</span>
+                    </div>
+                    
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="total">$1,461.21</span>
+                    </div>
+                    
+                    <button class="btn-checkout">
+                        <i class="fas fa-lock"></i> Proceed to Checkout
+                    </button>
+                    
+                    <a href="index.html" class="continue-shopping">
+                        <i class="fas fa-arrow-left"></i> Continue Shopping
+                    </a>
+                    
+                    <div class="security-info">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure checkout. Your information is safe.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recently Viewed -->
+            <div class="recently-viewed">
+                <h3><i class="fas fa-history"></i> Recently Viewed</h3>
+                <div class="viewed-items">
+                    <div class="viewed-item">
+                        <img src="https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Product">
+                        <span>$450.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

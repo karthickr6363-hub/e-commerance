@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics - Flipmart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .category-container {
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+        }
+        .category-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .category-header h1 {
+            font-size: 48px;
+            color: #283593;
+            font-weight: 900;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        .category-header p {
+            font-size: 18px;
+            color: #666;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-item {
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+            border: 1px solid #e0e0e0;
+        }
+        .product-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+        .product-image {
+            height: 300px;
+            background: #f9f9f9;
+            overflow: hidden;
+            position: relative;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .product-item:hover .product-image img {
+            transform: scale(1.05);
+        }
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-info h3 {
+            font-size: 18px;
+            color: #212121;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .product-price {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        .current-price {
+            font-size: 22px;
+            font-weight: 900;
+            color: #3949ab;
+        }
+        .old-price {
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+        }
+        .btn-add-cart {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #3949ab 0%, #283593 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-add-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(57, 73, 171, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Utility Bar -->
+    <div class="utility-bar">
+        <div class="container">
+            <div class="utility-left">
+                <select class="utility-select">
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+                <select class="utility-select">
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                </select>
+                <a href="account.html" class="utility-link"><i class="fas fa-user"></i> My Account</a>
+                <a href="#" class="utility-link"><i class="fas fa-heart"></i> Wishlist</a>
+            </div>
+            <div class="utility-right">
+                <a href="cart.html" class="utility-link"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                <a href="checkout.html" class="utility-link"><i class="fas fa-check"></i> Checkout</a>
+                <a href="login.html" class="utility-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Flip<span class="logo-accent">mart</span></span>
+                </a>
+                <div class="search-bar">
+                    <select class="categories-dropdown">
+                        <option>Categories</option>
+                        <option>Clothing</option>
+                        <option>Electronics</option>
+                        <option>Shoes</option>
+                        <option>Watches</option>
+                    </select>
+                    <input type="text" placeholder="Search here..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-summary">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div class="cart-info">
+                        <span class="cart-label">CART</span>
+                        <span class="cart-price">$600.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="clothing.html">CLOTHING</a></li>
+                <li><a href="electronics.html">ELECTRONICS</a></li>
+                <li><a href="health-beauty.html">HEALTH & BEAUTY</a></li>
+                <li><a href="watches.html">WATCHES</a></li>
+                <li><a href="jewellery.html">JEWELLERY</a></li>
+                <li><a href="shoes.html">SHOES</a></li>
+                <li><a href="kids.html">KIDS & GIRLS</a></li>
+              
+                <li class="nav-offer"><a href="#">TODAYS OFFER</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Electronics Section -->
+    <div class="category-container">
+        <div class="category-header">
+            <h1><i class="fas fa-mobile-alt"></i> ELECTRONICS</h1>
+            <p>Latest gadgets and technology products</p>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+    </div>
+
+    <script>
+        const electronicsProducts = [
+            { title: 'Smartphone Pro Max', price: 699.99, oldPrice: 899.99, image: 'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'HOT' },
+            { title: 'Wireless Headphones', price: 129.99, oldPrice: 199.99, image: 'https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'NEW' },
+            { title: 'Laptop Elite', price: 1199.99, oldPrice: 1499.99, image: 'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'SALE' },
+            { title: 'Smart Watch', price: 249.99, oldPrice: 349.99, image: 'https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'HOT' },
+            { title: 'Gaming Mouse', price: 79.99, oldPrice: 129.99, image: 'https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'NEW' },
+            { title: 'USB C Charger', price: 24.99, oldPrice: 39.99, image: 'https://images.pexels.com/photos/2582936/pexels-photo-2582936.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'SALE' },
+            { title: 'Bluetooth Speaker', price: 59.99, oldPrice: 89.99, image: 'https://images.pexels.com/photos/1020965/pexels-photo-1020965.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'HOT' },
+            { title: '4K Webcam', price: 89.99, oldPrice: 139.99, image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'NEW' },
+            { title: 'Wireless Keyboard', price: 69.99, oldPrice: 99.99, image: 'https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'SALE' },
+            { title: 'Portable SSD', price: 149.99, oldPrice: 199.99, image: 'https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'NEW' },
+            { title: 'Tablet Pro', price: 449.99, oldPrice: 599.99, image: 'https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'HOT' },
+            { title: 'Phone Stand', price: 19.99, oldPrice: 34.99, image: 'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop', badge: 'SALE' }
+        ];
+
+        function generateProducts() {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = electronicsProducts.map(product => `
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.title}">
+                        <div class="product-badge">${product.badge}</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>${product.title}</h3>
+                        <div class="product-price">
+                            <span class="current-price">$${product.price.toFixed(2)}</span>
+                            <span class="old-price">$${product.oldPrice.toFixed(2)}</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('${product.title}', ${product.price})">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(title, price) {
+            alert(`${title} added to cart! Price: $${price.toFixed(2)}`);
+        }
+
+        document.addEventListener('DOMContentLoaded', generateProducts);
+    </script>
+</body>
+</html>

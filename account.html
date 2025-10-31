@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Flipmart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="utility-bar">
+        <div class="container">
+            <div class="utility-left">
+                <select class="utility-select">
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+                <select class="utility-select">
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                </select>
+                <a href="account.html" class="utility-link"><i class="fas fa-user"></i> My Account</a>
+                <a href="#" class="utility-link"><i class="fas fa-heart"></i> Wishlist</a>
+            </div>
+            <div class="utility-right">
+                <a href="cart.html" class="utility-link"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                <a href="checkout.html" class="utility-link"><i class="fas fa-check"></i> Checkout</a>
+                <a href="login.html" class="utility-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Flip<span class="logo-accent">mart</span></span>
+                </a>
+                <div class="search-bar">
+                    <select class="categories-dropdown">
+                        <option>Categories</option>
+                        <option>Clothing</option>
+                        <option>Electronics</option>
+                        <option>Shoes</option>
+                        <option>Watches</option>
+                    </select>
+                    <input type="text" placeholder="Search here..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-summary">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div class="cart-info">
+                        <span class="cart-label">CART</span>
+                        <span class="cart-price" id="headerCartTotal">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="account-container">
+        <div class="container">
+            <div class="account-wrapper">
+                <aside class="account-sidebar">
+                    <div class="account-user">
+                        <div class="avatar">FM</div>
+                        <div class="user-info">
+                            <h3>John Doe</h3>
+                            <p>john.doe@example.com</p>
+                        </div>
+                    </div>
+                    <ul class="account-menu">
+                        <li class="active" data-tab="dashboard"><i class="fas fa-grid-2"></i> Dashboard</li>
+                        <li data-tab="orders"><i class="fas fa-box"></i> Orders</li>
+                        <li data-tab="addresses"><i class="fas fa-location-dot"></i> Addresses</li>
+                        <li data-tab="wishlist"><i class="fas fa-heart"></i> Wishlist</li>
+                        <li data-tab="settings"><i class="fas fa-gear"></i> Account Settings</li>
+                        <li data-tab="logout" class="logout"><i class="fas fa-right-from-bracket"></i> Logout</li>
+                    </ul>
+                </aside>
+
+                <main class="account-content">
+                    <section class="tab-panel active" id="dashboard">
+                        <h2>Welcome back, John</h2>
+                        <div class="dashboard-cards">
+                            <div class="dash-card">
+                                <i class="fas fa-box"></i>
+                                <div>
+                                    <h4>Orders</h4>
+                                    <p>3 in progress</p>
+                                </div>
+                            </div>
+                            <div class="dash-card">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <h4>Wishlist</h4>
+                                    <p>12 items</p>
+                                </div>
+                            </div>
+                            <div class="dash-card">
+                                <i class="fas fa-ticket"></i>
+                                <div>
+                                    <h4>Coupons</h4>
+                                    <p>2 available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="tab-panel" id="orders">
+                        <h2>My Orders</h2>
+                        <div class="orders-list">
+                            <div class="order-item">
+                                <div>
+                                    <h4>Order #100234</h4>
+                                    <p>Placed on Sep 15, 2025 • 3 items</p>
+                                </div>
+                                <div class="order-status shipped">Shipped</div>
+                                <button class="btn-primary small">View</button>
+                            </div>
+                            <div class="order-item">
+                                <div>
+                                    <h4>Order #100199</h4>
+                                    <p>Placed on Aug 29, 2025 • 1 item</p>
+                                </div>
+                                <div class="order-status processing">Processing</div>
+                                <button class="btn-primary small">View</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="tab-panel" id="addresses">
+                        <h2>Addresses</h2>
+                        <div class="address-grid">
+                            <div class="address-card">
+                                <div class="address-header">Default Shipping</div>
+                                <p>John Doe<br>123 Market Street<br>Los Angeles, CA 90001</p>
+                                <button class="btn-primary small">Edit</button>
+                            </div>
+                            <div class="address-card">
+                                <div class="address-header">Billing Address</div>
+                                <p>John Doe<br>123 Market Street<br>Los Angeles, CA 90001</p>
+                                <button class="btn-primary small">Edit</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="tab-panel" id="wishlist">
+                        <h2>Wishlist</h2>
+                        <div class="wishlist-grid">
+                            <div class="wishlist-item">
+                                <img src="https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Product"/>
+                                <div class="wish-info">
+                                    <h4>Black Duffel Bag</h4>
+                                    <span class="current-price">$450.99</span>
+                                    <div class="wish-actions">
+                                        <button class="btn-primary small">Add to Cart</button>
+                                        <button class="btn-remove small"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="tab-panel" id="settings">
+                        <h2>Account Settings</h2>
+                        <form class="settings-form" id="settingsForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" value="John Doe"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" value="john.doe@example.com"/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="tel" value="+1 555-123-4567"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" value="password"/>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary">Save Changes</button>
+                        </form>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="account.js"></script>
+</body>
+</html>

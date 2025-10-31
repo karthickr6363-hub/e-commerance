@@ -1,0 +1,31 @@
+<svg width="280" height="280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5f5f5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="280" height="280" fill="url(#bg)"/>
+  
+  <!-- Fashion Top with Floral Print -->
+  <rect x="60" y="60" width="160" height="180" rx="8" fill="#ffffff"/>
+  
+  <!-- Floral print pattern -->
+  <circle cx="90" cy="100" r="12" fill="#e91e63" opacity="0.7"/>
+  <circle cx="130" cy="90" r="15" fill="#c2185b" opacity="0.6"/>
+  <circle cx="170" cy="100" r="12" fill="#e91e63" opacity="0.7"/>
+  <circle cx="80" cy="140" r="14" fill="#ec407a" opacity="0.65"/>
+  <circle cx="120" cy="135" r="11" fill="#e91e63" opacity="0.7"/>
+  <circle cx="160" cy="140" r="13" fill="#c2185b" opacity="0.6"/>
+  <circle cx="110" cy="175" r="12" fill="#e91e63" opacity="0.7"/>
+  <circle cx="150" cy="175" r="15" fill="#ec407a" opacity="0.65"/>
+  
+  <!-- Buttons -->
+  <circle cx="140" cy="110" r="3" fill="#757575"/>
+  <circle cx="140" cy="140" r="3" fill="#757575"/>
+  <circle cx="140" cy="170" r="3" fill="#757575"/>
+  
+  <!-- Collar -->
+  <path d="M 120 60 L 140 70 L 160 60 L 155 85 L 125 85 Z" fill="#ffffff"/>
+  <path d="M 120 60 L 125 85 L 155 85 L 160 60 Z" fill="#e0e0e0" opacity="0.3"/>
+</svg>

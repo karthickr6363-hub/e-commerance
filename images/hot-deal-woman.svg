@@ -1,0 +1,43 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="250" height="250" fill="#f5f5f5"/>
+  
+  <!-- Woman in dark grey t-shirt -->
+  <!-- Legs -->
+  <rect x="90" y="140" width="20" height="90" fill="#90caf9"/>
+  <rect x="140" y="140" width="20" height="90" fill="#90caf9"/>
+  
+  <!-- Upper body -->
+  <ellipse cx="125" cy="100" rx="40" ry="60" fill="#fff3e0"/>
+  
+  <!-- Dark grey t-shirt -->
+  <path d="M 90 60 L 85 130 L 165 130 L 160 60 Z" fill="#616161" stroke="#424242" stroke-width="2"/>
+  
+  <!-- Sleeves -->
+  <ellipse cx="75" cy="90" rx="15" ry="35" fill="#616161"/>
+  <ellipse cx="175" cy="90" rx="15" ry="35" fill="#616161"/>
+  
+  <!-- Neckline -->
+  <ellipse cx="125" cy="80" rx="15" ry="12" fill="#9e9e9e"/>
+  
+  <!-- Arms -->
+  <ellipse cx="75" cy="105" rx="15" ry="35" fill="#fff3e0"/>
+  <ellipse cx="175" cy="105" rx="15" ry="35" fill="#fff3e0"/>
+  
+  <!-- Head -->
+  <circle cx="125" cy="40" r="25" fill="#fff3e0"/>
+  
+  <!-- Hair -->
+  <ellipse cx="125" cy="25" rx="30" ry="35" fill="#2c1810"/>
+  
+  <!-- Eyes -->
+  <circle cx="118" cy="38" r="3" fill="#2c1810"/>
+  <circle cx="132" cy="38" r="3" fill="#2c1810"/>
+  
+  <!-- Smile -->
+  <path d="M 115 45 Q 125 50 135 45" stroke="#2c1810" stroke-width="2" fill="none"/>
+</svg>
+
+
+
+

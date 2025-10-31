@@ -1,0 +1,44 @@
+<svg width="280" height="280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="watch" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#616161;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#212121;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="280" height="280" fill="url(#bg2)"/>
+  
+  <!-- Watch Display -->
+  <rect x="60" y="70" width="160" height="140" rx="15" fill="#ffffff" stroke="#e0e0e0" stroke-width="3"/>
+  
+  <!-- Watch Frame -->
+  <rect x="50" y="60" width="180" height="160" rx="20" fill="url(#watch)" stroke="#424242" stroke-width="2"/>
+  
+  <!-- Watch Face -->
+  <circle cx="140" cy="140" r="50" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Hour Markers -->
+  <circle cx="140" cy="100" r="2" fill="#424242"/>
+  <circle cx="140" cy="180" r="2" fill="#424242"/>
+  <circle cx="190" cy="140" r="2" fill="#424242"/>
+  <circle cx="90" cy="140" r="2" fill="#424242"/>
+  
+  <!-- Numbers -->
+  <circle cx="140" cy="90" r="3" fill="#424242"/>
+  <circle cx="195" cy="135" r="3" fill="#424242"/>
+  <circle cx="140" cy="190" r="3" fill="#424242"/>
+  <circle cx="85" cy="135" r="3" fill="#424242"/>
+  
+  <!-- Hands -->
+  <line x1="140" y1="140" x2="140" y2="110" stroke="#212121" stroke-width="3" stroke-linecap="round"/>
+  <line x1="140" y1="140" x2="170" y2="140" stroke="#757575" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Center -->
+  <circle cx="140" cy="140" r="4" fill="#212121"/>
+  
+  <!-- Side Crown -->
+  <rect x="200" y="130" width="15" height="20" rx="4" fill="#757575"/>
+</svg>

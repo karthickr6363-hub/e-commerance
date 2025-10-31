@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipmart - Online Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Utility Bar -->
+    <div class="utility-bar">
+        <div class="container">
+            <div class="utility-left">
+                <select class="utility-select">
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+                <select class="utility-select">
+                    <option>English</option>
+                </select>
+                <a href="account.html" class="utility-link"><i class="fas fa-user"></i> My Account</a>
+                <a href="#" class="utility-link"><i class="fas fa-heart"></i> Wishlist</a>
+            </div>
+            <div class="utility-right">
+                <a href="cart.html" class="utility-link"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                <a href="checkout.html" class="utility-link"><i class="fas fa-check"></i> Checkout</a>
+                <a href="login.html" class="utility-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Flip<span class="logo-accent">mart</span></span>
+            </a>
+                <div class="search-bar">
+                    <select class="categories-dropdown">
+                        <option>Categories</option>
+                        <option>Clothing</option>
+                        <option>Electronics</option>
+                        <option>Shoes</option>
+                        <option>Watches</option>
+                    </select>
+                    <input type="text" placeholder="Search here..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="cart-summary">
+                    <i class="fas fa-shopping-bag"></i>
+                    <div class="cart-info">
+                        <span class="cart-label">CART</span>
+                        <span class="cart-price">$600.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="clothing.html">CLOTHING</a></li>
+                <li><a href="electronics.html">ELECTRONICS</a></li>
+                <li><a href="health-beauty.html">HEALTH & BEAUTY</a></li>
+                <li><a href="watches.html">WATCHES</a></li>
+                <li><a href="jewellery.html">JEWELLERY</a></li>
+                <li><a href="shoes.html">SHOES</a></li>
+                <li><a href="kids.html">KIDS & GIRLS</a></li>
+                <li class="nav-offer"><a href="todays-offer.html">TODAYS OFFER</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="categories-header">
+                <h3>CATEGORIES</h3>
+            </div>
+            <ul class="categories-list">
+                <li class="category-item">
+                    <div class="category-link">
+                        <i class="fas fa-tshirt"></i> <span>Clothing</span> <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="category-submenu">
+                        <li><a href="#">Men's Clothing</a></li>
+                        <li><a href="#">Women's Clothing</a></li>
+                        <li><a href="#">Kids Clothing</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <div class="category-link">
+                        <i class="fas fa-mobile-alt"></i> <span>Electronics</span> <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="category-submenu">
+                        <li><a href="#">Mobile Phones</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Headphones</a></li>
+                        <li><a href="#">Cameras</a></li>
+                        <li><a href="#">TVs</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <div class="category-link">
+                        <i class="fas fa-shoe-prints"></i> <span>Shoes</span> <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="category-submenu">
+                        <li><a href="#">Men's Shoes</a></li>
+                        <li><a href="#">Women's Shoes</a></li>
+                        <li><a href="#">Sports Shoes</a></li>
+                        <li><a href="#">Sneakers</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <div class="category-link">
+                        <i class="fas fa-clock"></i> <span>Watches</span> <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="category-submenu">
+                        <li><a href="#">Men's Watches</a></li>
+                        <li><a href="#">Women's Watches</a></li>
+                        <li><a href="#">Smart Watches</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <div class="category-link">
+                        <i class="fas fa-gem"></i> <span>Jewellery</span> <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="category-submenu">
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Necklaces</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <div class="category-link">
+                        <i class="fas fa-spa"></i> <span>Health and Beauty</span> <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="category-submenu">
+                        <li><a href="#">Skincare</a></li>
+                        <li><a href="#">Makeup</a></li>
+                        <li><a href="#">Haircare</a></li>
+                        <li><a href="#">Fragrances</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <div class="category-link">
+                        <i class="fas fa-baby"></i> <span>Kids and Babies</span> <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="category-submenu">
+                        <li><a href="#">Baby Clothing</a></li>
+                        <li><a href="#">Toys</a></li>
+                        <li><a href="#">Feeding</a></li>
+                        <li><a href="#">Baby Care</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <div class="category-link">
+                        <i class="fas fa-futbol"></i> <span>Sports</span> <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="category-submenu">
+                        <li><a href="#">Fitness Equipment</a></li>
+                        <li><a href="#">Sports Apparel</a></li>
+                        <li><a href="#">Outdoor Gear</a></li>
+                    </ul>
+                </li>
+                <li class="category-item">
+                    <div class="category-link">
+                        <i class="fas fa-home"></i> <span>Home and Garden</span> <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <ul class="category-submenu">
+                        <li><a href="#">Furniture</a></li>
+                        <li><a href="#">Decor</a></li>
+                        <li><a href="#">Garden Tools</a></li>
+                        <li><a href="#">Kitchenware</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Right Content Area -->
+        <main class="content-area">
+            <!-- Hero Banner -->
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>SPRING 2016</h1>
+                        <h2>WOMEN <span class="accent">FASHION</span></h2>
+                        <p>Discover the latest trends and styles for the season</p>
+                        <button class="btn-primary">SHOP NOW</button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop" alt="Woman Fashion" class="hero-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Bar -->
+            <section class="features-bar">
+                <div class="feature-item">
+                    <h3>MONEY BACK</h3>
+                    <p>30 Days Money Back Guarantee</p>
+                </div>
+                <div class="feature-item">
+                    <h3>FREE SHIPPING</h3>
+                    <p>Shipping on orders over $99</p>
+                </div>
+                <div class="feature-item">
+                    <h3>SPECIAL SALE</h3>
+                    <p>Extra $5 off on all items</p>
+                </div>
+            </section>
+
+            <!-- Hot Deals Section -->
+            <section class="section hot-deals">
+                <div class="section-header">
+                    <h2>HOT DEALS</h2>
+                    <div class="section-controls">
+                        <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="deals-container">
+                    <div class="product-card featured">
+                        <div class="product-image">
+                            <img src="https://images.pexels.com/photos/884979/pexels-photo-884979.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Floral Print Buttoned" class="product-img">
+                            <span class="badge discount">40% OFF</span>
+                        </div>
+                        <div class="countdown-timer">
+                            <div class="timer-item">
+                                <span class="timer-value">120</span>
+                                <span class="timer-label">DAYS</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-value">20</span>
+                                <span class="timer-label">HRS</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-value">36</span>
+                                <span class="timer-label">MINS</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-value">60</span>
+                                <span class="timer-label">SEC</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Floral Print Buttoned</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$600.00</span>
+                                <span class="old-price">$800.00</span>
+                            </div>
+                            <button class="btn-add-cart"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Products Section -->
+            <section class="section new-products">
+                <div class="section-header">
+                    <h2>NEW PRODUCTS</h2>
+                    <div class="section-filters">
+                        <button class="filter-btn active">All</button>
+                        <button class="filter-btn">Clothing</button>
+                        <button class="filter-btn">Electronics</button>
+                        <button class="filter-btn">Shoes</button>
+                    </div>
+                    <div class="section-controls">
+                        <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be generated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Special Offers Section -->
+            <section class="section special-offers">
+                <div class="section-header">
+                    <h2>SPECIAL OFFERS</h2>
+                    <div class="section-controls">
+                        <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="offer-badge">-50% OFF</div>
+                        <div class="offer-image">
+                            <img src="https://images.pexels.com/photos/884979/pexels-photo-884979.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Floral Print Shirt">
+                        </div>
+                        <div class="offer-info">
+                            <h3>Floral Print Shirt</h3>
+                            <div class="offer-price">
+                                <span class="current-price">$29.99</span>
+                                <span class="old-price">$59.99</span>
+                            </div>
+                            <div class="offer-desc">Limited Time Offer</div>
+                            <button class="btn-primary small">Buy Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-badge">BUY 1 GET 1</div>
+                        <div class="offer-image">
+                            <img src="https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Premium Watch">
+                        </div>
+                        <div class="offer-info">
+                            <h3>Premium Watches</h3>
+                            <div class="offer-price">
+                                <span class="current-price">$199.99</span>
+                                <span class="old-price">$399.98</span>
+                            </div>
+                            <div class="offer-desc">Free Shipping</div>
+                            <button class="btn-primary small">Buy Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-badge">NEW ARRIVAL</div>
+                        <div class="offer-image">
+                            <img src="https://images.pexels.com/photos/1599452/pexels-photo-1599452.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Designer Glasses">
+                        </div>
+                        <div class="offer-info">
+                            <h3>Designer Glasses</h3>
+                            <div class="offer-price">
+                                <span class="current-price">$89.99</span>
+                                <span class="old-price">$120.00</span>
+                            </div>
+                            <div class="offer-desc">Trending Now</div>
+                            <button class="btn-primary small">Buy Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-badge">FLASH SALE</div>
+                        <div class="offer-image">
+                            <img src="https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Leather Duffel Bag">
+                        </div>
+                        <div class="offer-info">
+                            <h3>Leather Duffel Bag</h3>
+                            <div class="offer-price">
+                                <span class="current-price">$79.99</span>
+                                <span class="old-price">$149.99</span>
+                            </div>
+                            <div class="offer-desc">Limited Stock</div>
+                            <button class="btn-primary small">Buy Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-badge">-40% OFF</div>
+                        <div class="offer-image">
+                            <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Wireless Headphones">
+                        </div>
+                        <div class="offer-info">
+                            <h3>Wireless Headphones</h3>
+                            <div class="offer-price">
+                                <span class="current-price">$59.99</span>
+                                <span class="old-price">$99.99</span>
+                            </div>
+                            <div class="offer-desc">Premium Quality</div>
+                            <button class="btn-primary small">Buy Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-badge">HOT DEAL</div>
+                        <div class="offer-image">
+                            <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Running Shoes">
+                        </div>
+                        <div class="offer-info">
+                            <h3>Running Shoes</h3>
+                            <div class="offer-price">
+                                <span class="current-price">$69.99</span>
+                                <span class="old-price">$129.99</span>
+                            </div>
+                            <div class="offer-desc">Comfort & Style</div>
+                            <button class="btn-primary small">Buy Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-badge">-35% OFF</div>
+                        <div class="offer-image">
+                            <img src="https://images.pexels.com/photos/6078728/pexels-photo-6078728.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Smart Watch">
+                        </div>
+                        <div class="offer-info">
+                            <h3>Smart Watch</h3>
+                            <div class="offer-price">
+                                <span class="current-price">$129.99</span>
+                                <span class="old-price">$199.99</span>
+                            </div>
+                            <div class="offer-desc">Latest Technology</div>
+                            <button class="btn-primary small">Buy Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-badge">MEGA SALE</div>
+                        <div class="offer-image">
+                            <img src="https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Travel Backpack">
+                        </div>
+                        <div class="offer-info">
+                            <h3>Travel Backpack</h3>
+                            <div class="offer-price">
+                                <span class="current-price">$89.99</span>
+                                <span class="old-price">$179.99</span>
+                            </div>
+                            <div class="offer-desc">Best Quality</div>
+                            <button class="btn-primary small">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Banners -->
+            <section class="bottom-banners">
+                <div class="banner-left">
+                    <h2>SPECIAL OFFER</h2>
+                    <p>Floral Print Shirt</p>
+                </div>
+                <div class="banner-middle">
+                    <img src="https://images.pexels.com/photos/60619/boot-leather-shoe-old-60619.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop" alt="Fashion Sale" class="banner-img">
+                    <div class="banner-overlay">
+                        <h2 class="banner-title">2016 FASHION SALE</h2>
+                        <button class="btn-primary">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="banner-right">
+                    <img src="https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop" alt="Save 50%" class="banner-img">
+                    <div class="banner-overlay accent">
+                        <h2 class="banner-title">SAVE UPTO 50%</h2>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

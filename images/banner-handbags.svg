@@ -1,0 +1,30 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#f5f5f5"/>
+  
+  <!-- Purple handbag -->
+  <rect x="60" y="110" width="40" height="60" rx="3" fill="#ab47bc"/>
+  <path d="M 70 110 Q 80 95 90 110" stroke="#8e24aa" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Red handbag -->
+  <rect x="130" y="105" width="40" height="65" rx="3" fill="#e53935"/>
+  <path d="M 140 105 Q 150 90 160 105" stroke="#c62828" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Blue handbag -->
+  <rect x="200" y="110" width="40" height="60" rx="3" fill="#2196f3"/>
+  <path d="M 210 110 Q 220 95 230 110" stroke="#1976d2" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Orange handbag -->
+  <rect x="270" y="108" width="40" height="62" rx="3" fill="#ff9800"/>
+  <path d="M 280 108 Q 290 93 300 108" stroke="#f57c00" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Handles/hardware -->
+  <circle cx="80" cy="115" r="4" fill="#8e24aa"/>
+  <circle cx="150" cy="110" r="4" fill="#c62828"/>
+  <circle cx="220" cy="115" r="4" fill="#1976d2"/>
+  <circle cx="290" cy="113" r="4" fill="#f57c00"/>
+</svg>
+
+
+
+
